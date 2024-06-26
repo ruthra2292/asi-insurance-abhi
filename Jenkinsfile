@@ -32,8 +32,8 @@ pipeline {
 
         stage('Step4:Deploy our application') {
             steps{
-                sh 'docker run -d --name docker_project${BUILD_NUMBER} -p 8050:80 selvam2292/asi_insurance_java:${BUILD_NUMBER}'
-		echo "Application started on port:8080 {http}"
+                sh 'docker run -d --name docker_project${BUILD_NUMBER} -p 8081:8081 selvam2292/asi_insurance_java:${BUILD_NUMBER}'
+		echo "Application started on port:8081 {http}"
                     }
                 }
     }
